@@ -1,0 +1,39 @@
+.add-post {}
+
+.add-post__inner {
+  max-width: 600px;
+  width: 100%;
+}
+
+.add-post__form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.add-post__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.add-post__form-error{
+  color: red;
+}
+
+.add-post__form-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #c7c7c7;
+  margin-bottom: 12px;
+}
+
+.add-post__form-button {
+  width: 100%;
+  background-color: royalblue;
+  color: #fff;
+  border-radius: 5px;
+  border: none; 
+  padding: 12px 10px;
+}

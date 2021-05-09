@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <title>Eventor | Home</title>
+</head>
+
+<body class="main-page">
+  <div class="container">
+    <%- include('partials/header'); %>
+  </div>
+  <main class="main">
+    <div class="container">
+      <section class="search">
+        <h1 class="search__title">Find help for orginize your events!</h1>
+        <form action="#" class="search__form">
+          <input class="search__input" type="text" name="search" id="search-input" placeholder="Search for eventors"
+            autocomplete="off">
+          <button class="search__button " type="submit">
+            <img class="search__button-img" src="/assets/images/search.svg" alt="Search img" width="24" height="24">
+          </button>
+        </form>
+      </section>
+
+      <section class="categories">
+        <ul class="categories__list">
+          <li class="categories__item">
+            <a class="categories__link" data-value="0" href="#">All</a>
+          </li>
+          <li class="categories__item">
+            <a class="categories__link" data-value="3" href="#">Individual staff</a>
+          </li>
+          <li class="categories__item">
+            <a class="categories__link" data-value="1" href="#">Event Management Agency</a>
+          </li>
+          <li class="categories__item">
+            <a class="categories__link" data-value="2" href="#">Places</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="search-result close">
+        <h2 class="search-result__title">Result: <span class="search-result__count">12</span></h2>
+        <ul class="users">
+
+        </ul>
+      </section>
+
+      <section class="category-section category-section--all">
+        <h2 class="category-section__title">Eventors</h2>
+        <ul class="users">
+
+        </ul>
+      </section>
+
+
+    </div>
+  </main>
+
+
+
+  <template class="user-template">
+    <li class="users__item">
+      <a href="#" class="users__link user">
+        <img class="user__img" src="http://www.serebii.net/pokemongo/pokemon/041.png" alt="Image" width="86"
+          height="72">
+        <div class="user__details">
+          <h3 class="user__name">Zuat</h3>
+          <p class="user__job-title">Lorem ipsum dolor sit amet consectetur.</p>
+          <div class="user__details-bottom">
+            <p class="user__category">consectetur</p>
+            <p class="user__views">Views: <span class="user__views-count">10</span></p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </template>
+
+  <section class="modal modal--close add-post">
+    <div class="modal__inner add-post__inner">
+      <form class="add-post__form" action="#" method="POST">
+        <h1 class="add-post__title">Add Post or Event</h1>
+        <input class="add-post__form-input add-post__form-input--title" type="text" name="title" id="title"
+          placeholder="Title of Event" required>
+        <input class="add-post__form-input add-post__form-input--file" type="file" name="image" id="image"
+          placeholder="Image" required>
+        <p class="add-post__form-error"></p>
+        <button type="submit" class="add-post__form-button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

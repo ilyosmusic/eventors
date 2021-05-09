@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <title>Eventor | Profile</title>
+</head>
+
+<body>
+  <div class="container">
+    <%- include('partials/header'); %>
+    <main class="user-info">
+      <section class="user-info__right">
+        <div class="user-info__details">
+          <img class="user-info__img" src="http://localhost:5000/<%= user.img_src %>" alt="image" width="72"
+            height="72">
+          <p class="user-info__name"><%= user.name %></p>
+          <p class="user-info__job-title">
+            Job Title:
+            <span class="user-info__job-title-value">
+              <%= user.job_title %>
+            </span>
+          </p>
+          <p class="user-info__phone">
+            Phobe Number:
+            <span class="user-info__phone-value">
+              <%= user.phone_number %>
+            </span>
+          </p>
+          <p class="user-info__category">
+            Category:
+            <span class="user-info__category-value">
+              <%= user.cat_name %>
+            </span>
+          </p>
+          <p class="user-info__views">
+            Views Count:
+            <span class="user-info__views-count">
+              <%= user.views_count %>
+            </span>
+          </p>
+          <a href="<%= user.location_link %>" class="user-info__location" target="_blank">
+            Location
+          </a>
+        </div>
+      </section>
+
+      <section class="user-info__left">
+        <div class="user-info__about">
+          <h3 class="user-info__about-title">About</h3>
+          <p class="user-info__about-desc"><%= user.bio %></p>
+        </div>
+        <div class="user-info__posts">
+          <h3 class="user-info__posts-title">Events</h3>
+          <ul class="posts">
+            <% posts.forEach((post) => { %>
+            <li class="posts__item">
+              <img class="posts__item-img" src="http://localhost:5000/<%= post.img_src %>" alt="image" width="465"
+                height="240">
+              <p class="posts__item-title">
+                <%= post.title %>
+              </p>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="modal modal--close add-post">
+    <div class="modal__inner add-post__inner">
+      <form class="add-post__form" action="#" method="POST">
+        <h1 class="add-post__title">Add Post or Event</h1>
+        <input class="add-post__form-input add-post__form-input--title" type="text" name="title" id="title"
+          placeholder="Title of Event" required>
+        <input class="add-post__form-input add-post__form-input--file" type="file" name="image" id="image"
+          placeholder="Image" required>
+          <p class="add-post__form-error"></p>
+        <button type="submit" class="add-post__form-button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

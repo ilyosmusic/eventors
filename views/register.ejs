@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <title>Eventor | Register</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <nav class="nav">
+        <a class="logo" href="/">
+          <img class="logo__img" src="/assets/images/eventor-03.png" alt="logo" width="120" height="48">
+        </a>
+      </nav>
+    </header>
+  </div>
+  <div class="register" id="register">
+    <form class="register__form" action="#" method="POST">
+      <h1 class="register__title">Sign in Page</h1>
+      <div class="register__form-input-group">
+        <input class="register__form-input" type="text" name="name" id="name" placeholder="Name" required>
+        <input class="register__form-input" type="text" name="phoneNumber" id="phoneNumber"
+          placeholder="Phone Number (+998991234567)" required>
+      </div>
+      <input class="register__form-input" type="email" name="email" id="email" placeholder="Email" required>
+      <input class="register__form-input" type="password" name="password" id="password" placeholder="Password" required>
+      <input class="register__form-input" type="text" name="bio" id="bio" placeholder="Bio" required>
+      <input class="register__form-input" type="text" name="locationLink" id="locationLink" placeholder="Location link"
+        required>
+      <input class="register__form-input" type="file" name="image" id="image" placeholder="Avatar image" required>
+      <select class="register__form-select" name="categorId" id="categorId">
+      </select>
+      <input class="register__form-input" type="text" name="jobTitle" id="jobTitle" placeholder="Job title" required>
+      <p class="register__form-error"></p>
+      <button type="submit" class="register__form-button">Submit</button>
+      <p class="register__form-desc">Have a account?
+        <a href="/login" class="register__form-link-auth">Log in</a>
+      </p>
+    </form>
+  </div>
+  <template class="category-option-template">
+    <option value="1" class="register__form-category">A</option>
+  </template>
+  <script src="/assets/js/register.js"></script>
+
+</body>
+
+</html>

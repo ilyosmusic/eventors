@@ -1,0 +1,28 @@
+.posts{
+  display: flex;
+  margin: 0px -5px;
+  padding-left: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.posts__item{
+  margin: 5px;
+  max-width: 465px;
+  width: 100%;  
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  padding: 5px;
+  
+}
+.posts__item-img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-width: 465px;
+  max-height: 240px;
+}
+.posts__item-title{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
